@@ -3,7 +3,7 @@
 % arara: pdflatex: { shell : yes, action: nonstopmode, draft: yes }
 % arara: pdflatex: { shell : yes, action: nonstopmode}
 \documentclass[paper=letter, BCOR=0mm, DIV=calc, fontsize=10pt,%
-               titlepage=false]{scrartcl}
+               titlepage=true]{scrartcl}
 
 \usepackage[utf8]{inputenc}
 \DeclareUnicodeCharacter{2212}{$-{}$} % matplotlib negative ticklabels
@@ -17,6 +17,7 @@
   % \AtBeginDocument{\renewcommand{\partial}{\uppartial}}
 \setkomafont{disposition}{\normalcolor\sffamily}
 \pagestyle{headings}
+\usepackage[normalem]{ulem}
 
 %BIB%
 \usepackage[%
@@ -31,7 +32,7 @@
 \DefineBibliographyStrings{english}{%
   bibliography = {References},% replace "references" with "bibliography"  for `book`/`report`
 }
-\setlength\bibitemsep{1.5\itemsep} %increase entry spacing. Nice if the global spacing is single space. Default is \itemsep
+\setlength\bibitemsep{\itemsep} %increase entry spacing. Nice if the global spacing is single space. Default is \itemsep
 \KOMAoption{bibliography}{openstyle, totoc}
 
 % % Table stuff
@@ -58,7 +59,8 @@
 
 % KOMA-script or custom geometry? Choose one:
 % \typearea[current]{last}
-\usepackage[top=1.12in, bottom=1.62in, left=1.7in, right=1.7in]{geometry}
+% \usepackage[top=1.12in, bottom=1.62in, left=1.7in, right=1.7in]{geometry}
+\usepackage[top=0.78in, bottom=1.22in, left=1.35in, right=1.35in]{geometry}
 
 \usepackage{minted}
 \usemintedstyle{tango}
@@ -80,12 +82,12 @@
 \defasforeign[perse]{per se}
 \defasforeign[sans]{sans}
 
-\subject{CSI4105 Project Proposal}
-\title{Set Covering Problem}
+\subject{CSI4105 Type 1 Project}
+\title{Weighted Set Covering Problem Research Proposal}
 \author{
-        Ali
-        \and Jeremiah O'Neil \\ \texttt{jonei096@uottawa.ca} \\ 6498391
-        \and Mark Kasun
+        Ali Mowazi \\ 5879953
+        \and Jeremiah O'Neil \\ 6498391  %\\ \texttt{jonei096@uottawa.ca}
+        \and Mark Kasun \\ 3806554
         }
 \date{\today}
 \titlehead{\Large University of Ottawa/\\Universit\'e d'Ottawa}
